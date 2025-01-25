@@ -1,10 +1,17 @@
-// Create variable for button element using ID
-const button = document.getElementById("my-btn");
+const yesButton = document.getElementById("btn-yes");
+const noButton = document.getElementById("btn-no");
+const yesCount = document.getElementById("count-yes");
+const noCount = document.getElementById("count-no");
 
-// Define function to return message
-const alertMessage = () => {
-    alert("You clicked me!");
-};
+let yesVotes = 0;
+let noVotes = 0;
 
-// Add event listener to button element with function to open dialogue box with message
-button.addEventListener("click", alertMessage);
+yesButton.addEventListener("click", function() {
+    yesVotes++; 
+    yesCount.textContent = yesVotes; 
+});
+
+noButton.addEventListener("click", function() {
+    noVotes++; 
+    noCount.textContent = noVotes; 
+});
