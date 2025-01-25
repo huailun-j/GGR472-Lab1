@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGR472: Exercise 1</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>GGR472 Lab 1</title>
+     <!-- Bootstrap style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- Example Bootsrap navbar (no functionality yet) -->
+    <!-- Bootsrap navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">GGR472 Lab1</a>
@@ -25,59 +25,60 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
+                  
+                    
 
-    <!-- Container for Bootstrap grid -->
+    <!-- Container for Bootstrap grid, add external and interal links here -->
     <div class="container">
-        <div>
-            <h1>Hello World!</h1>
-            <p>This is a paragraph<br>
-                over two lines. <a target=”_blank” href="https://www.utoronto.ca/">Click here</a></p>
+        <div class="container text-center">
+            <h1>Ski Resorts Around Toronto</h1>
+            <p>10 Ski Resorts Near You!</p>
+        </div>
+ 
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <img src="https://www.shutterstock.com/image-vector/sliding-professional-skier-orange-warm-600nw-2393971811.jpg">
+            </div>
         </div>
 
-        <!-- Example Bootstrap grid system. One row, three columns of equal width -->
         <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-primary" id="my-btn">My Button</button>
+            <div class="col-12 text-center">
+                <!-- internal link to the GeoJSON file  -->
+                <p>View the GeoJSON file of Ski Resort Locations in
+                    <a target ="_blank" href="Lab1_SkiResortmap.geojson">Click Me!</a>
+                </p>
+                <!-- external link webpage to see the ski resorts information -->
+                <p>link webpage to see the ski resorts information
+                    <a href="https://www.onthesnow.com/toronto/ski-resorts">Toronto Ski Resorts Click Here
+
+                    </a>
+                </p>
+                <p>Do you like ski or snow borad?
+                </p>
             </div>
-            <div class="col">
-                Col 2
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary" id="btn-yes">Yes!</button>
+                <button type="button" class="btn btn-primary" id="btn-no">No!</button>
             </div>
-            <div class="col">
-                Col 3
+        </div>
+        <!-- Count for vote yes and no -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>Total votes in agreement:
+                    <span id="count-yes">0</span>
+                </p>
+                <p>Total votes against:
+                    <span id="count-no">0</span>
+                </p>
             </div>
         </div>
     </div>
-
-    <!-- button that returns message in alter window, and NEED CHANGE HERE-->
-     <button type="button" class="btn btn-primary" id="my-btn">Click me!</button>
 
     <!-- Source of external JavaScript files -->
     <script src="script.js"></script>
